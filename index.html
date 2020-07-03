@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>MBTI로 알아보는 나는 어떤 엄빠?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<style>
+		* { 
+            margin: 0; 
+            padding: 0; 
+            background-color:#ed7475;
+            font-family: 'Nanum Gothic'
+        }
+        #title{ 
+            color: white; 
+            margin-top:2rem;
+            font-size:1.5rem;
+            font-weight:500;
+        }
+        #bold{
+            font-size: 2rem;
+            font-weight:600;
+            margin:0.5rem;
+        }
+        #main_img{
+            width:50%;
+            margin:1rem;
+            }
+        .btn{
+            bottom:0.5rem;
+            margin-bottom:2rem;
+        }
+        .button{
+            border:1px solid white;
+            display:block;
+            text-decoration:none;
+            width:300px;
+            color:white;
+            font-size:1.2rem;
+            padding:0.5rem;
+            margin:1rem;
+            background-color:#ed7475;
+            cursor:pointer;
+            border-radius:5px;
+            box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
+        }
+        .button:hover{
+            background-color:#e8545b;
+        }
+        #logo{
+            bottom:0.5rem;
+            width:5rem;
+        }
+        @media(max-width:700px){
+            #title{
+                margin-top:4rem;
+            }
+            #main_img{
+                width:140%;
+                transform:translate(-15%,-0%);
+                margin-top:3rem;
+            }
+            .btn{
+                margin-top:4rem;
+            }
+        }
+	</style>
+    <script>
+        window.SERVER_DATA={"APP_KEY":"c089c8172def97eb00c07217cae17495","AUTHORIZE_REDIRECT_URI":"https://developers.kakao.com/tool/demo/oauth","LINK_APP_KEY":"3e786f8df14fcfc89d159421a6a7c9b6","SDK_URL":"https://developers.kakao.com/sdk/js/kakao.min.js","PUBLIC_CHANNEL_ID":"_xcLqmC","LINK_TEMPLATE_ID":"3135","PHASE":"release","KD-DEVELOPER-ID":"267617","KD-DEVELOPER-EMAIL":"shaloti@naver.com","KD-DEVELOPER-TOKEN":"b8fde92ee364668b49c07073453b5337197e8a5fe8c02018c3de99b534606814"}
+    </script>
+</head>
+<body>
+    
+    <script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <center>
+            <div id="title">내 MBTI로 보는
+                <div id="bold">나는 어떤 엄빠???</div>
+                충격과 공포 깽깽</div>
+            <img id="main_img" src="img/intro.jfif">
+            <div class="btn">
+                <a class="button" href="question0.html">테스트 시작 / 6문항</a>
+                <a class="button" href="javascript:sendLink()">카톡 공유하기</a></div>
+            <img id="logo" src="img/logo.png">
+        </center>
+<script type="text/javascript">
+    try { 
+    Kakao.init('4ad0ef84470bf2e44e5217152e196287')
+  function sendLink() {
+    Kakao.Link.sendCustom({
+        templateId:31794,
+        templateArgs:{
+        title:"내 MBTI로 보는 나는 어떤 엄빠???",
+        description:"간단한 테스트로 나는 어떤 부모 유형인지 알아보자!",
+    },
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() } catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+</script>
+    
+    
+</body>
+</html>
