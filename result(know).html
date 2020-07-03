@@ -24,6 +24,19 @@
     console.log(T);
     </script>
     <script type="text/javascript" src="js/mbti(know).js"></script>
-    <script type="text/javascript" src="js/kakao.js"></script>
+    <script type="text/javascript">
+    try { 
+    Kakao.init('4ad0ef84470bf2e44e5217152e196287')
+  function sendLink() {
+    Kakao.Link.sendCustom({
+        templateId:31794,
+        templateArgs:{
+        title:"내 MBTI로 보는 나는 어떤 엄빠???",
+        description:"간단한 테스트로 나는 어떤 부모 유형인지 알아보자!",
+    },
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() } catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+</script>
 </body>
 </html>
