@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>결과</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <center>
+        <p id="bottom_text">내 유형은?</p>
+        <h1 id="mbti">ISFJ</h1>
+        <img id="img" src="img/isfj.png">
+        <p id="text">이러면 애기한테 안좋을까? <br>소심소심</p>
+        <div id="btn">
+            <a class="button" href="#">클라쓰에 맞는 육아정보 확인하기</a>
+            <a class="button" href="index.html">테스트 다시하기</a>
+            <a class="button" href="javascript:sendLink()">공유하기</a>
+        </div>
+    </center>
+    <script type="text/javascript">
+        try {
+            Kakao.init('4ad0ef84470bf2e44e5217152e196287')
+
+            function sendLink() {
+                Kakao.Link.sendCustom({
+                    templateId: 31941,
+                    templateArgs: {
+                        title: "내 MBTI로 보는 나는 어떤 엄빠???",
+                        description: "간단한 테스트로 나는 어떤 부모 유형인지 알아보자!",
+                    },
+                })
+            };
+            window.kakaoDemoCallback && window.kakaoDemoCallback()
+        } catch (e) {
+            window.kakaoDemoException && window.kakaoDemoException(e)
+        }
+    </script>
+</body></html>
