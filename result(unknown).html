@@ -24,13 +24,14 @@
     </center>
     <script type="text/javascript" src="js/mbti(unknown).js"></script>
     <script type="text/javascript">
-            var result = sessionStorage.getItem('result');
-            if(result=="ENFJ"){
+            
+            
             try {
                 Console.log("ENFJ");
-            Kakao.init('4ad0ef84470bf2e44e5217152e196287')
+            Kakao.init('4ad0ef84470bf2e44e5217152e196287');
             var result = sessionStorage.getItem('result');    
             function sendLink() {
+                if(result=="ENFJ"){
                 Kakao.Link.sendCustom({
                     templateId: 31794,
                     templateArgs: {
@@ -38,11 +39,11 @@
                         description: "간단한 테스트로 나는 어떤 부모 유형인지 알아보자!",
                     },
                 })
-            };
+            }};
             window.kakaoDemoCallback && window.kakaoDemoCallback()
         } catch (e) {
             window.kakaoDemoException && window.kakaoDemoException(e)
-        }}
+        }
 
     </script>
 </body>
