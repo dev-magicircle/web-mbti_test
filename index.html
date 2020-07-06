@@ -5,63 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>MBTI로 알아보는 나는 어떤 엄빠?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
-            background-color: #ed7475;
-            font-family: 'Nanum Gothic'
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #logo {
+            width:50px;
+            position: relative;
+            top: 2rem;
+            width: 5rem;
         }
 
         #title {
-            color: white;
+            color: black;
             margin-top: 2rem;
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: lighter;
         }
 
         #bold {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 0.5rem;
+            font-size: 32px;
+            font-weight: bold;
         }
 
         #main_img {
-            width: 50%;
-            margin: 1rem;
+            width: 100%;
+            margin-top:1rem;
+            margin-bottom:2rem;
         }
 
-        .btn {
-            bottom: 0.5rem;
-            margin-bottom: 2rem;
-        }
 
-        .button {
-            border: 1px solid white;
+        .btn{
+            position:relative;
+            bottom:1rem;
+        }
+        #btn1,
+        #btn2 {
             display: block;
             text-decoration: none;
-            width: 300px;
+            width: 90%;
             color: white;
-            font-size: 1.2rem;
+            font-size: 16px;
             padding: 0.5rem;
-            margin: 1rem;
-            background-color: #ed7475;
+            margin: 0.5rem;
             cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        #btn1 {
+            background-color: #3373BA;
+        }
+
+        #btn2 {
+            background-color: #FFEC00;
+            color: black;
         }
 
         .button:hover {
             background-color: #e8545b;
         }
 
-        #logo {
-            bottom: 0.5rem;
-            width: 5rem;
-        }
 
-        @media(max-width:700px) {
+
+        @media(min-width:700px) {
+            * {
+                width: 700px;
+                margin: 0 auto;
+            }
+
             #title {
                 margin-top: 4rem;
             }
@@ -76,21 +91,22 @@
                 margin-top: 4rem;
             }
         }
-
     </style>
 </head>
 
 <body>
     <script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <center>
+        <img id="logo" src="img/Logo.png">
         <div id="title">내 MBTI로 보는
-            <div id="bold">나는 어떤 엄빠???</div>
-            충격과 공포 깽깽</div>
+            <div id="bold">나는 어떤 엄빠??</div>
+        </div>
         <img id="main_img" src="img/intro.jfif">
         <div class="btn">
-            <a class="button" href="question0.html">테스트 시작</a>
-            <a class="button" href="javascript:sendLink()">카톡 공유하기</a></div>
-        <img id="logo" src="img/logo.png">
+            <a id="btn1" href="question0.html">테스트 시작</a>
+            <a id="btn2" href="javascript:sendLink()">카톡 공유하기</a>
+        </div>
+
     </center>
     <script type="text/javascript">
         try {
@@ -109,10 +125,7 @@
         } catch (e) {
             window.kakaoDemoException && window.kakaoDemoException(e)
         }
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>

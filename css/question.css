@@ -1,63 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-* { 
-    margin: 0; 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    position: relative;
+    margin: 0;
     padding: 0;
-    font-family: 'Nanum Myeongjo', serif;
-    background-color:#ed7475;
-}
-.box { 
-    display:block;width: 100%; 
-    position:absolute;
-    top:20%;
-}
-#qNumber
-{
-    font-size:2rem;
-    color:white;
-    text-align: center; 
-}
-#question
-{
-    font-size:2rem;
-    color:white;
-    text-align: center; 
-    position: relative; 
-    margin-top:4rem; 
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-#select{
-    display:inline-block; 
-    position:relative;
-    margin-top:7rem; 
-    font-size: 2rem;
-    left:50%;
-    transform:translate(-50%,-0%)
+.box {
+    margin: 10% 0%;
 }
-#yes,#no{
-    cursor:pointer;
-    border-radius:5px;
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
-    text-decoration: none; 
-    color: white; 
-    padding:1.5rem;
-    margin:1rem;
-    border:1px solid white;
-    width:3rem;
+
+#qNumber {
+    position: relative;
+    font-size: 24px;
+    color: #3373BA;
     text-align: center;
 }
-#yes:hover, #no:hover{
-    background-color:#e8545b;
+
+#question {
+    font-size: 32px;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-top: 10%;
+    
 }
-a:hover{
-   background-color:black;}
-@media(max-width:700px){
-    #qNumber{
-        font-size:1.7rem;
+
+#img {
+    margin-top: 10%;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 90%;
+}
+
+.select {
+    position:absolute;
+    margin:auto;
+    left:50%;
+}
+
+#yes,
+#no {
+ 
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    font-weight: 300;
+    
+}
+
+#yes {
+    background-color: #3373BA;
+    border: 2px solid #3373BA;
+}
+
+#no {
+    border: 2px solid #3373BA;
+    color: #3373BA;
+}
+
+#yes:hover,
+#no:hover {
+    background-color: #e8545b;
+}
+
+a:hover {
+    background-color: black;
+}
+
+#reset {
+    position: relative;
+    margin-top: 1rem;
+    color: #898989;
+    font-size: 14px;
+}
+
+@media(min-width:700px) {
+    * {
+        width: 700px;
+        margin: 0 auto;
     }
-    #question{
-        font-size:1.7rem;
-    }
-    #select{
-        font-size:1.7rem;
-    }
+
 }

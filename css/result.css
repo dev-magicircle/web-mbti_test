@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * {
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: #ed7475;
-    font-family: 'Nanum Gothic', sans-serif;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #wrap {
@@ -20,13 +20,13 @@
     position: relative;
     margin-top: 2rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 #mbti {
     font-family: 'Bangers', cursive;
-    font-size: 6rem;
-    color: #fcee6b;
+    font-size: 56px;
+    color: #3373BA;
 }
 
 #img {
@@ -34,10 +34,21 @@
     margin-bottom: 1rem;
     width:
 }
-
+.explanation{
+    width:90%;
+    text-align:left;
+    font-size:16px;
+}
+.explanation>#title{
+    font-weight: 700;
+} 
+.explanation>#main_text{
+    font-weight:400;
+    color:#898989;
+}
 #text {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 #btn {
@@ -48,16 +59,29 @@
     display: block;
     border: 1px solid white;
     width: 20rem;
-    font-size: 1.2rem;
+    height:
+    font-size: 16px;
+    font-weight:700;
     padding: 0.5rem;
     margin: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    
     padding: 8px;
     margin: 10px;
 }
-
+#btn1{
+    background-color:#3373BA;
+    color:white;
+    border: 2px solid #3373BA;
+}
+#btn2{
+    background-color:white;
+    border: 2px solid #3373BA;
+}
+#btn3{
+    background-color:#FFEC00;
+}
 a {
     text-decoration: none;
 }
