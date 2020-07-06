@@ -25,12 +25,11 @@
     <script type="text/javascript" src="js/mbti(unknown).js"></script>
     <script type="text/javascript">
             
-            
-            try {
-                Console.log("ENFJ");
-            Kakao.init('4ad0ef84470bf2e44e5217152e196287');
-            var result = sessionStorage.getItem('result');    
+               
             function sendLink() {
+            Kakao.init('4ad0ef84470bf2e44e5217152e196287');
+            var result = sessionStorage.getItem('result');
+                console.log(result);
                 if(result=="ENFJ"){
                 Kakao.Link.sendCustom({
                     templateId: 31794,
@@ -41,9 +40,7 @@
                 })
             }};
             window.kakaoDemoCallback && window.kakaoDemoCallback()
-        } catch (e) {
-            window.kakaoDemoException && window.kakaoDemoException(e)
-        }
+        
 
     </script>
 </body>
