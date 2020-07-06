@@ -69,7 +69,6 @@ window.onload = function() {
             }
         }
     }
-    document.getElementById('mbti').innerHTML = result;
     if (result == 'ENFJ') {
         document.getElementById('img').src = 'img/enfj.png';
         document.getElementById('text').innerHTML = '이 육아서.. 저 육아서.. <br>뭘 믿어야하지…';
