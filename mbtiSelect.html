@@ -1,82 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>선택지</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>선택지</title>
     <link rel="stylesheet" href="css/question.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <style> 
-        h2{
-            color:white;
-            position:relative;
-            margin-top:8rem;
-            font-size:2rem;
+    <style>
+        h2 {
+            color: white;
+            position: relative;
+            margin-top: 10%;
+            font-size: 2rem;
         }
-        .mbti{
+
+        .mbti {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            margin:3rem;
-            }
-       a{
-           font-family: 'Nanum Gothic'
-           font-weight:600;
-            border:1.5px solid white;
-            display:block;
-            text-decoration:none;
-            width:15rem;
-            color:white;
-            font-size:1.2rem;
-            padding:1rem;
-            margin:1rem;
-            background-color:#ed7475;
-            cursor:pointer;
-            border-radius:5px;
-            box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
+            grid-template-columns: repeat(4, 1fr);
+            margin: 3rem;
         }
-        a:hover{
-            background-color:#e8545b;
+
+        a {
+            font-family: 'Nanum Gothic';
+            font-weight: 600;
+            border: 1.5px solid white;
+            display: block;
+            text-decoration: none;
+            width: 17rem;
+            color: white;
+            font-size: 1.2rem;
+            padding: 1rem;
+            margin: 1rem;
+            background-color: #ed7475;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
         }
-        @media(max-width:700px){
-            h2{
-                font-size:1.5rem;
+
+        a:hover {
+            background-color: #e8545b;
+        }
+
+        @media(max-width:700px) {
+            h2 {
+                font-size: 1.5rem;
             }
-            .mbti{
-            --auto-grid-min-size: 16rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin:3rem;
+
+            .mbti {
+                --auto-grid-min-size: 16rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: 3rem;
             }
-            a{
-                width:5rem;
-                margin:0.5rem;
+
+            a {
+                width: 5rem;
+                margin: 0.5rem;
                 font-size
             }
         }
     </style>
 </head>
+
 <body>
-	<center>
-        <h2>당신의 MBTI를 고르세요.</h2>
-        <div class="mbti">
-		<a href="result(know).html" onclick="enfj()">ENFJ</a>
-        <a href="result(know).html" onclick="enfp()">ENFP</a>
-        <a href="result(know).html" onclick="entj()">ENTJ</a>
-        <a href="result(know).html" onclick="entp()">ENTP</a>
-        <a href="result(know).html" onclick="esfj()">ESFJ</a>
-        <a href="result(know).html" onclick="esfp()">ESFP</a>
-        <a href="result(know).html" onclick="estj()">ESTJ</a>
-        <a href="result(know).html" onclick="estp()">ESTP</a>
-        <a href="result(know).html" onclick="infj()">INFJ</a>
-        <a href="result(know).html" onclick="infp()">INFP</a>
-        <a href="result(know).html" onclick="intj()">INTJ</a>
-        <a href="result(know).html" onclick="intp()">INTP</a>
-        <a href="result(know).html" onclick="isfj()">ISFJ</a>
-        <a href="result(know).html" onclick="isfp()">ISFP</a>
-        <a href="result(know).html" onclick="istj()">ISTJ</a>
-        <a href="result(know).html" onclick="istp()">ISTP</a>
-        </div>
-	</center>
-<script type="text/javascript" src="js/mbti(know).js"></script>
-</body>
-</html>
+    <div>
+        <center>
+            <h2>당신의 MBTI를 고르세요.</h2>
+            <div class="mbti">
+                <a href="result(know).html" onclick="enfj()">ENFJ</a>
+                <a href="result(know).html" onclick="enfp()">ENFP</a>
+                <a href="result(know).html" onclick="entj()">ENTJ</a>
+                <a href="result(know).html" onclick="entp()">ENTP</a>
+                <a href="result(know).html" onclick="esfj()">ESFJ</a>
+                <a href="result(know).html" onclick="esfp()">ESFP</a>
+                <a href="result(know).html" onclick="estj()">ESTJ</a>
+                <a href="result(know).html" onclick="estp()">ESTP</a>
+                <a href="result(know).html" onclick="infj()">INFJ</a>
+                <a href="result(know).html" onclick="infp()">INFP</a>
+                <a href="result(know).html" onclick="intj()">INTJ</a>
+                <a href="result(know).html" onclick="intp()">INTP</a>
+                <a href="result(know).html" onclick="isfj()">ISFJ</a>
+                <a href="result(know).html" onclick="isfp()">ISFP</a>
+                <a href="result(know).html" onclick="istj()">ISTJ</a>
+                <a href="result(know).html" onclick="istp()">ISTP</a>
+            </div>
+        </center>
+    </div>
+    <script type="text/javascript" src="js/mbti(know).js"></script>
+</body></html>
