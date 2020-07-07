@@ -19,21 +19,21 @@
 
 #top_text {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 4rem;/*비율*/
     font-size: 1rem;
     font-weight: 400;
 }
 
 #mbti {
-   font-family: 'Anton', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: bolder;
     font-size: 56px;
     color: #3373BA;
 }
 
 #img {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 7%;/*비율*/
+    margin-bottom: 8%;/*비율*/
     width: 100%;
 }
 
@@ -58,14 +58,14 @@
 }
 
 #btn {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;/*비율*/
+    margin-bottom: 2rem;/*비율*/
 }
 
 #btn .button {
     display: block;
     border: 1px solid white;
-    height:40px;
+    height: 40px;
     line-height: 40px;
     font-size: 16px;
     font-weight: 700;
@@ -73,7 +73,7 @@
     cursor: pointer;
     border-radius: 12px;
     padding: 8px;
-    margin:6px 24px;
+    margin: 6px 24px;
 }
 
 #btn > #btn1 {
