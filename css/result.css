@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,14 +19,14 @@
 
 #bottom_text {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 1rem;
     font-weight: 400;
 }
 
 #mbti {
-    //font-family: 'Bangers', cursive;
-    font-weight:800;
+   font-family: 'Anton', sans-serif;
+    font-weight: bolder;
     font-size: 56px;
     color: #3373BA;
 }
@@ -33,20 +34,24 @@
 #img {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width:100%;
+    width: 100%;
 }
-.explanation{
-    width:90%;
-    text-align:left;
-    font-size:16px;
+
+.explanation {
+    width: 90%;
+    text-align: left;
+    font-size: 16px;
 }
-.explanation>#title{
+
+.explanation > #title {
     font-weight: 700;
-} 
-.explanation>#main_text{
-    font-weight:400;
-    color:#898989;
 }
+
+.explanation > #main_text {
+    font-weight: 400;
+    color: #898989;
+}
+
 #text {
     font-size: 24px;
     font-weight: 700;
@@ -54,38 +59,42 @@
 
 #btn {
     margin-top: 4rem;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
 }
 
 #btn .button {
     display: block;
     border: 1px solid white;
     width: 20rem;
-    height:
+    height:40px;
+    line-height: 40px;
     font-size: 16px;
-    font-weight:700;
+    font-weight: 700;
     padding: 0.5rem;
     margin: 1rem;
     cursor: pointer;
     border-radius: 12px;
-    
     padding: 8px;
     margin: 10px;
 }
-#btn>#btn1{
-    background-color:#3373BA;
-    color:white;
+
+#btn > #btn1 {
+    background-color: #3373BA;
+    color: white;
     border: 2px solid #3373BA;
 }
-#btn>#btn2{
-    background-color:white;
-    color:#3373BA;
+
+#btn > #btn2 {
+    background-color: white;
+    color: #3373BA;
     border: 2px solid #3373BA;
 }
-#btn>#btn3{
-    background-color:#FFEC00;
-     border: 2px solid #FFEC00;
+
+#btn > #btn3 {
+    background-color: #FFEC00;
+    border: 2px solid #FFEC00;
 }
+
 a {
     text-decoration: none;
 }
@@ -97,10 +106,19 @@ a {
 a:hover {
     background-color: #e8545b;
 }
-@media(min-width:700px) {
-            * {
-                width: 700px;
-                margin: 0 auto;
-            }
 
-        }
+@media(min-width:700px) {
+    * {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    #img {
+        width: 60%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #btn {
+        margin-top: 2rem;
+    }
