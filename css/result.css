@@ -65,17 +65,15 @@
 #btn .button {
     display: block;
     border: 1px solid white;
-    width: 20rem;
     height:40px;
     line-height: 40px;
     font-size: 16px;
     font-weight: 700;
     padding: 0.5rem;
-    margin: 1rem;
     cursor: pointer;
     border-radius: 12px;
     padding: 8px;
-    margin: 10px;
+    margin:6px 24px;
 }
 
 #btn > #btn1 {
