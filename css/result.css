@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-#bottom_text {
+#top_text {
     position: relative;
     margin-top: 4rem;
     font-size: 1rem;
@@ -38,7 +38,7 @@
 }
 
 .explanation {
-    width: 90%;
+    margin: 0 24px;
     text-align: left;
     font-size: 16px;
 }
