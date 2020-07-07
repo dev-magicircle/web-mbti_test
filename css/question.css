@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * {
-    position: relative;
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
 .box {
-    margin: 10% 0%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
 }
 
 #qNumber {
-    position: relative;
     font-size: 24px;
+    font-weight: 700;
     color: #3373BA;
     text-align: center;
+    color: #3373BA;
 }
 
 #question {
     font-size: 32px;
+    font-weight: 700;
     color: black;
     text-align: center;
     position: relative;
     margin-top: 10%;
-    
 }
 
 #img {
@@ -35,15 +38,16 @@
 }
 
 .select {
-    position:absolute;
-    margin:auto;
-    left:50%;
+    margin: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:
 }
 
 #yes,
 #no {
- 
     font-size: 24px;
+    font-weight: 300;
     display: inline-block;
     cursor: pointer;
     border-radius: 12px;
@@ -51,40 +55,83 @@
     color: white;
     padding: 20px 20px;
     text-align: center;
-    font-weight: 300;
-    
 }
 
 #yes {
+    margin-right: 2px;
     background-color: #3373BA;
     border: 2px solid #3373BA;
 }
 
 #no {
+    margin-left: 2px;
     border: 2px solid #3373BA;
     color: #3373BA;
 }
 
-#yes:hover,
-#no:hover {
-    background-color: #e8545b;
+#yes:hover {
+    background-color: #3373BA;
+    opacity: 0.7;
 }
 
-a:hover {
-    background-color: black;
+#no:hover {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 #reset {
-    position: relative;
+    text-decoration: none;
     margin-top: 1rem;
+    margin-left: 24px;
+    text-align: left;
+}
+
+#reset_detail {
+    text-decoration: none;
     color: #898989;
     font-size: 14px;
 }
 
 @media(min-width:700px) {
     * {
-        width: 700px;
+        width: 500px;
         margin: 0 auto;
     }
+
+    #img {
+        width: 90%;
+    }
+
+    .bottom {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+    }
+
+    .select {
+        margin: 0;
+    }
+
+    .select > #yes,
+    .select > #no {
+        width: 200px;
+    }
+
+    #qNumber {
+        margin-top: 4%;
+    }
+
+    #question {
+
+        margin-top: 4%;
+    }
+
+    #img {
+        margin-top: 4%;
+
+    }
+
+    .select {}
+
 
 }

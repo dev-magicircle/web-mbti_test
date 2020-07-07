@@ -24,15 +24,16 @@
 }
 
 #mbti {
-    font-family: 'Bangers', cursive;
+    //font-family: 'Bangers', cursive;
+    font-weight:800;
     font-size: 56px;
     color: #3373BA;
 }
 
 #img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width:
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width:100%;
 }
 .explanation{
     width:90%;
@@ -53,6 +54,7 @@
 
 #btn {
     margin-top: 4rem;
+    margin-bottom:2rem;
 }
 
 #btn .button {
@@ -70,17 +72,19 @@
     padding: 8px;
     margin: 10px;
 }
-#btn1{
+#btn>#btn1{
     background-color:#3373BA;
     color:white;
     border: 2px solid #3373BA;
 }
-#btn2{
+#btn>#btn2{
     background-color:white;
+    color:#3373BA;
     border: 2px solid #3373BA;
 }
-#btn3{
+#btn>#btn3{
     background-color:#FFEC00;
+     border: 2px solid #FFEC00;
 }
 a {
     text-decoration: none;
@@ -93,9 +97,10 @@ a {
 a:hover {
     background-color: #e8545b;
 }
+@media(min-width:700px) {
+            * {
+                width: 700px;
+                margin: 0 auto;
+            }
 
-@media(max-width:700px) {
-    #text {
-        font-size: 1.4rem;
-    }
-}
+        }

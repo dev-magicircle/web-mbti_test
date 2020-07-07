@@ -5,21 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>선택지</title>
-    <link rel="stylesheet" href="css/question.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+        }
+
+        .wrapper {
+            margin: 24px;
+            display: flex;
+            height: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 100%;
+            position: relative;
+            top: -60px;
+        }
+
+        #qNumber {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3373BA;
+            margin-bottom: 8%;
+        }
+
+        #question {
+            word-break: keep-all;
+            margin-bottom: 8%;
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .select {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .select #yes,
+        .select #no {
+            height: 80px;
+            line-height: 80px;
+            font-size: 24px;
+            font-weight: 300;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            transition: all 0.9s, color 0.3;
+        }
+
+        .select #yes {
+            margin-right: 3px;
+            background-color: #3373BA;
+            border: 2px solid #3373BA;
+        }
+
+        .select #no {
+            border: 2px solid #3373BA;
+            color: #3373BA;
+        }
+
+        #yes:hover {
+            background-color: #3373BA;
+            opacity: 0.7;
+        }
+
+        #no:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+
+        @media(min-width:700px) {
+
+            * {
+                width: 500px;
+                margin: 0 auto;
+            }
+
+            .select>#yes,
+            .select>#no {
+                width: 240px;
+                margin: 4px;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
-    <div id="wrap">
+    <div class="wrapper">
         <div class="box">
-            <h2 id="qNumber">Q</h2>
-            <h2 id="question">내 MBTI를 알고 있다.</h2>
-            <div id="select">
+            <div id="qNumber">Q</div>
+            <div id="question">
+                <p>내 MBTI를 알고 있다.</p>
+            </div>
+            <div class="select">
                 <a id="yes" href="mbtiselect.html">YES</a>
                 <a id="no" href="question1.html">NO</a>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/value.js"></script>
-</body>
 
-</html>
+
+    <script type="text/javascript" src="js/value.js"></script>
+</body></html>
