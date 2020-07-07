@@ -21,7 +21,8 @@
     color: #3373BA;
     position: relative;
     top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 13%;
+    /*비율*/
 }
 
 #question {
@@ -29,7 +30,8 @@
     font-weight: 700;
     color: black;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 6%;
+    /*비율*/
 }
 
 #img {
@@ -37,7 +39,8 @@
 }
 
 .select {
-    margin-top: 1rem;
+    margin-top: 12%;
+    /*비율*/
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -53,16 +56,18 @@
     color: white;
     padding: 20px 20px;
     text-align: center;
+    height: 30px;
+    line-height: 30px;
 }
 
 #yes {
-    margin-right: 3px;
+    margin-right: 4px;
     background-color: #3373BA;
     border: 2px solid #3373BA;
 }
 
 #no {
-    margin-left: 3px;
+    margin-left: 4px;
     border: 2px solid #3373BA;
     color: #3373BA;
 }
@@ -78,7 +83,8 @@
 
 #reset {
     text-decoration: none;
-    margin-top: 3rem;
+    margin-top: 12%;
+    /*비율*/
     text-align: left;
     margin-bottom: 2rem;
 }
@@ -97,19 +103,14 @@
 
     #img {
         width: 70%;
-        margin-bottom:1.5rem;
+        margin-bottom: 8%;
     }
 
-    .bottom {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-
-    }
 
     .select > #yes,
     .select > #no {
-        width: 130px;
+        width: 129px;
+
     }
 
     #question {
@@ -117,39 +118,59 @@
     }
 
     #qNumber {
-        margin-bottom: 3rem;
+        margin-bottom: 10%;
     }
 
     #question {
-        margin-bottom: 1rem;
+        margin-bottom: 5%;
     }
 
     .select {
-        margin-bottom: 1rem;
+        margin-bottom: 9%;
         width: 500px;
         margin: 0;
+    }
+
+    #reset {
+        margin-top: 10%;
+        text-align: center;
+        transform: translate(-116px, 0)
     }
 
 
 }
 
-@media(max-width:420px) {
-    #question {
-        font-size: 28px;
-    }
+@media(max-height:670px) {
+
 
     #qNumber {
-        margin-bottom: 3rem;
+        margin-bottom: 10%;
+        /*비율*/
     }
 
     #question {
-        margin-bottom: 1rem;
+
+        margin-bottom: 3%;
+        /*비율*/
     }
 
+
     .select {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 9%;
+        /*비율*/
+
     }
+
+
+    #reset {
+
+        margin-top: 9%;
+        /*비율*/
+    }
+
+
+}
+
 
 
 }

@@ -22,11 +22,12 @@
 
         #logo {
             width: 50px;
+            margin-bottom: 6%;
+            /*1*/
         }
 
         #title {
             color: black;
-            margin-top: 8%;
             font-size: 20px;
             font-weight: lighter;
         }
@@ -39,12 +40,15 @@
         #main_img {
             width: 100%;
             height: px;
-            margin-top: 8%;
-            margin-bottom: 20%
+            margin-top: 6%;
+            /*1*/
+            margin-bottom: 20%;
         }
 
-        #btn1,
-        #btn2 {
+        .btn {}
+
+        .btn #btn1,
+        .btn #btn2 {
             display: block;
             text-decoration: none;
             height: 56px;
@@ -54,24 +58,28 @@
             cursor: pointer;
             border-radius: 12px;
             line-height: 56px;
-            margin-top: 8px;
-            margin-left:24px;
-            margin-right:24px;
+            margin-left: 24px;
+            margin-right: 24px;
         }
 
-        #btn1 {
+        .btn #btn1 {
             background-color: #3373BA;
         }
 
-        #btn2 {
+        .btn #btn2 {
+            margin-top: 8px;
             background-color: #FFEC00;
             color: black;
         }
 
-        .button:hover {
-            background-color: #e8545b;
+        .btn #btn1:hover {
+            opacity: 0.9;
         }
 
+
+        .btn #btn2:hover {
+            opacity: 0.8;
+        }
 
 
         /*가로길이가 700px이상*/
@@ -81,10 +89,8 @@
                 margin: 0 auto;
             }
 
-            #title {
-
-                margin-top: 4%;
-
+            #logo {
+                margin-bottom: 4%;
             }
 
             #main_img {
@@ -92,30 +98,28 @@
                 margin-bottom: 8%
             }
 
+            .btn {}
+
+            .btn #btn1,
+            .btn #btn2 {
+                margin-left: 0;
+                margin-right: 0;
+
+            }
+
+
 
         }
 
-        /*세로길이가 600px아래*/
-        @media(max-width:600px) {
-            #title {
-                margin-top: 1%;
+        /*세로길이가 650px아래*/
+        @media(max-height:650px) {
+            #logo {
+                margin-bottom: 1%;
             }
 
             #main_img {
                 margin-top: 1%;
-                margin-bottom: 2%
-            }
-        }
-
-        /*세로길이가 800px위*/
-        @media(min-height:800px) {
-            #title {
-                margin-top: 8%;
-            }
-
-            #main_img {
-                margin-top: 8%;
-                margin-bottom: 20%
+                margin-bottom: 3%
             }
         }
     </style>
@@ -130,10 +134,8 @@
         </div>
         <img id="main_img" src="img/first_img.gif">
         <div class="btn">
-            <center>
-                <div><a id="btn1" href="question0.html">테스트 시작</a></div>
-                <div><a id="btn2" href="javascript:sendLink()">카톡 공유하기</a></div>
-            </center>
+            <div><a id="btn1" href="question0.html">테스트 시작</a></div>
+            <div><a id="btn2" href="javascript:sendLink()">카톡 공유하기</a></div>
         </div>
     </div>
     <script type="text/javascript">
