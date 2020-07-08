@@ -61,7 +61,7 @@
 }
 
 #btn {
-    margin-top: 4rem;
+    margin-top: 2rem;
     /*비율*/
     margin-bottom: 2rem;
     /*비율*/
@@ -140,5 +140,9 @@ a {
     #btn .button {
         width: 432px;
     }
+    
+    #scroll{
+    width:452px;
+}
 
 }
