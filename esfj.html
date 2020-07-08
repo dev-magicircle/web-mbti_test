@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>결과</title>
     <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 
@@ -22,10 +24,53 @@
         </div>
         <div id="btn">
             <a class="button" id="btn1" href="https://babybilly.app/"></a>
-            <a class="button" id="btn2" href="index.html"></a>
             <a class="button" id="btn3" href="javascript:sendLink()"></a>
+            <a class="button" id="btn2" href="index.html"></a>
+
         </div>
+        <!--<div class="your-class">
+            <div>your content</div>
+            <div>your content</div>
+            <div>your content</div>
+        </div>-->
     </center>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.your-class').slick({
+                setting - name: setting - value
+            });
+        });
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
     <script type="text/javascript">
         try {
             Kakao.init('4ad0ef84470bf2e44e5217152e196287')
