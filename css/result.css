@@ -80,17 +80,17 @@
     border-radius: 12px;
     padding: 8px;
     margin: 6px 24px;
-    
+
 }
 
 /*빌리버튼*/
 #btn > #btn1 {
     border: 2px solid #3373BA;
-    background-color:#3373BA;
+    background-color: #3373BA;
     background-image: url("/img/billy_btn@4x-8.png");
     background-size: 335px 56px;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 
 }
 
@@ -100,17 +100,17 @@
     background-image: url("/img/retest_btn@4x-8.png");
     background-size: 335px 56px;
     background-repeat: no-repeat;
-     background-position:center;
+    background-position: center;
 }
 
 /*카카오버튼*/
 #btn > #btn3 {
     border: 2px solid #FFEC00;
-    background-color:#FFEC00;
+    background-color: #FFEC00;
     background-image: url("/img/kakao_btn@4x-8.png");
     background-size: 335px 56px;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
 
 
@@ -140,11 +140,5 @@ a {
     #btn .button {
         width: 432px;
     }
-
-
-
-}
-
-@media(max-height:600px) {
 
 }
