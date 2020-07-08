@@ -26,6 +26,7 @@
 }
 
 #question {
+    word-break: keep-all;
     font-size: 32px;
     font-weight: 700;
     color: black;
@@ -140,7 +141,7 @@
 
 }
 
-@media(max-height:670px) {
+@media(max-height:732px) {
 
 
     #qNumber {
@@ -149,24 +150,19 @@
     }
 
     #question {
-
+        font-size:24px;
         margin-bottom: 3%;
         /*비율*/
     }
 
-
     .select {
-        margin-top: 9%;
-        /*비율*/
-
-    }
-
-
-    #reset {
-
-        margin-top: 9%;
+        margin-top: 0%;
         /*비율*/
     }
+    #reset{
+        margin-top:3%;
+    }
+
 
 
 }

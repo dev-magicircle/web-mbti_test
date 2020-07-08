@@ -19,7 +19,8 @@
 
 #top_text {
     position: relative;
-    margin-top: 4rem;/*비율*/
+    margin-top: 4rem;
+    /*비율*/
     font-size: 1rem;
     font-weight: 400;
 }
@@ -32,8 +33,10 @@
 }
 
 #img {
-    margin-top: 7%;/*비율*/
-    margin-bottom: 8%;/*비율*/
+    margin-top: 7%;
+    /*비율*/
+    margin-bottom: 8%;
+    /*비율*/
     width: 100%;
 }
 
@@ -58,9 +61,12 @@
 }
 
 #btn {
-    margin-top: 4rem;/*비율*/
-    margin-bottom: 2rem;/*비율*/
+    margin-top: 4rem;
+    /*비율*/
+    margin-bottom: 2rem;
+    /*비율*/
 }
+
 
 #btn .button {
     display: block;
@@ -80,7 +86,12 @@
     background-color: #3373BA;
     color: white;
     border: 2px solid #3373BA;
+    background-image: url("/img/btn1(3)@4x-8.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
+
 
 #btn > #btn2 {
     background-color: white;
@@ -91,7 +102,13 @@
 #btn > #btn3 {
     background-color: #FFEC00;
     border: 2px solid #FFEC00;
+    background-image: url("/img/btn3(3)@4x-8.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -107,16 +124,35 @@ a:hover {
 
 @media(min-width:700px) {
     * {
-        width: 700px;
         margin: 0 auto;
     }
 
+    .explanation {
+        width: 452px;
+    }
+
     #img {
-        width: 60%;
-        margin-top: 1rem;
+        width: 500px;
+        margin-top: 3%;
         margin-bottom: 1rem;
     }
 
-    #btn {
-        margin-top: 2rem;
+    #btn .button {
+        width: 432px;
     }
+
+    #btn #btn1 {
+        background-image: url("/img/btn1(1)@4x-8.png")
+    }
+     #btn #btn3 {
+        background-image: url("/img/btn3(1)@4x-8.png")
+    }
+    
+    
+
+}
+
+@media(max-height:600px) {
+
+    #btn > #btn1 {}
+}

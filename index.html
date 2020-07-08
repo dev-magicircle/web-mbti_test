@@ -46,10 +46,8 @@
             margin-bottom: 20%;
         }
 
-        .btn {}
-
-        .btn #btn1,
-        .btn #btn2 {
+        #btn #btn1,
+        #btn #btn2 {
             display: block;
             text-decoration: none;
             height: 56px;
@@ -63,22 +61,22 @@
             margin-right: 24px;
         }
 
-        .btn #btn1 {
+        #btn #btn1 {
             background-color: #3373BA;
         }
 
-        .btn #btn2 {
+        #btn #btn2 {
             margin-top: 8px;
             background-color: #FFEC00;
             color: black;
         }
 
-        .btn #btn1:hover {
+        #btn #btn1:hover {
             opacity: 0.9;
         }
 
 
-        .btn #btn2:hover {
+        #btn #btn2:hover {
             opacity: 0.8;
         }
 
@@ -99,17 +97,9 @@
                 margin-bottom: 8%
             }
 
-            .btn {}
-
-            .btn #btn1,
-            .btn #btn2 {
-                margin-left: 0;
-                margin-right: 0;
-
+            #btn .button {
+                width: 452px;
             }
-
-
-
         }
 
         /*세로길이가 650px아래*/
@@ -134,9 +124,9 @@
             <div id="bold">나는 어떤 엄빠??</div>
         </div>
         <img id="main_img" src="img/first_img.gif">
-        <div class="btn">
-            <div><a id="btn1" href="question0.html">테스트 시작</a></div>
-            <div><a id="btn2" href="javascript:sendLink()">카톡 공유하기</a></div>
+        <div id="btn">
+            <div><a class="button" id="btn1" href="question0.html">테스트 시작</a></div>
+            <div><a class="button" id="btn2" href="javascript:sendLink()">카톡 공유하기</a></div>
         </div>
     </div>
     <script type="text/javascript">
