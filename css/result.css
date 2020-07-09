@@ -103,15 +103,53 @@
     background-position: center;
 }
 
-/*카카오버튼*/
-#btn > #btn3 {
-    border: 2px solid #FFEC00;
-    background-color: #FFEC00;
-    background-image: url("/img/kakao_btn@4x-8.png");
-    background-size: 335px 56px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
+ #btn #btn_low {
+     margin-top: 6%;
+     /*1*/
+ }
+
+ /*카카오버튼*/
+ #btn #btn_kakao {
+     margin-right: 8px;
+ }
+
+ #btn #btn_kakao img {
+     width: 56px;
+ }
+
+ /*페북버튼*/
+ #btn #btn_facebook {
+     margin-top: 8px;
+     margin-right: 8px;
+ }
+
+ #btn #btn_facebook img {
+     width: 56px;
+ }
+
+ /*링크복사버튼*/
+ #btn #btn_urlshare img {
+     width: 56px;
+ }
+
+
+ /*마우스 오버 효과*/
+ #btn #btn_test:hover {
+     opacity: 0.9;
+ }
+
+ #btn #btn_kakao:hover {
+     opacity: 0.8;
+ }
+
+ #btn #btn_facebook:hover {
+     opacity: 0.8;
+ }
+
+ #btn #btn_urlshare:hover {
+     opacity: 0.8;
+ }
 
 
 
@@ -141,7 +179,7 @@ a {
 
 .slick-slide {
     transition: all ease-in-out .3s;
-    opacity: .5;
+    opacity: .4;
 }
 
 .slick-active {

@@ -1,0 +1,152 @@
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: 'Noto Sans KR', sans-serif;
+ }
+
+ .box {
+     position: absolute;
+     top: 50%;
+     transform: translate(0, -50%);
+     text-align: center;
+ }
+
+ #logo {
+     width: 50px;
+     margin-bottom: 6%;
+     /*1*/
+ }
+
+ #title {
+     color: black;
+     font-size: 20px;
+     font-weight: 300;
+ }
+
+ #bold {
+     font-size: 32px;
+     font-weight: 700;
+ }
+
+ #main_img {
+     width: 100%;
+     height: px;
+     margin-top: 6%;
+     /*1*/
+     margin-bottom: 20%;
+ }
+
+
+ #btn #btn_test {
+     margin-left: 24px;
+     margin-right: 24px;
+     display: block;
+     text-decoration: none;
+     height: 56px;
+     color: white;
+     font-size: 16px;
+     font-weight: 700;
+     cursor: pointer;
+     border-radius: 12px;
+     line-height: 56px;
+     background-color: #3373BA;
+     border: 2px solid #3373BA;
+     margin-bottom: 8px;
+ }
+
+ #btn #btn_low {
+     margin-top: 6%;
+     /*1*/
+ }
+
+ /*카카오버튼*/
+ #btn #btn_kakao {
+     margin-right: 8px;
+ }
+
+ #btn #btn_kakao img {
+     width: 56px;
+ }
+
+ /*페북버튼*/
+ #btn #btn_facebook {
+     margin-top: 8px;
+     margin-right: 8px;
+ }
+
+ #btn #btn_facebook img {
+     width: 56px;
+ }
+
+ /*링크복사버튼*/
+ #btn #btn_urlshare img {
+     width: 56px;
+ }
+
+
+ /*마우스 오버 효과*/
+ #btn #btn_test:hover {
+     opacity: 0.9;
+ }
+
+ #btn #btn_kakao:hover {
+     opacity: 0.8;
+ }
+
+ #btn #btn_facebook:hover {
+     opacity: 0.8;
+ }
+
+ #btn #btn_urlshare:hover {
+     opacity: 0.8;
+ }
+
+
+
+ /*가로길이가 700px이상*/
+ @media(min-width:700px) {
+     * {
+         width: 500px;
+         margin: 0 auto;
+     }
+
+     #btn {
+         width: 452px;
+         transform: translate(-24px, 0);
+     }
+
+     #btn #btn_test {
+         width: 452px;
+
+     }
+
+     #logo {
+         margin-bottom: 2%;
+     }
+
+     #main_img {
+         margin-top: 2%;
+         margin-bottom: 4%
+     }
+
+     #btn #btn_low {
+         margin-top: 4%;
+         /*1*/
+     }
+
+
+ }
+
+
+
+ /*세로길이가 650px아래*/
+ @media(max-height:650px) {
+     #logo {
+         margin-bottom: 1%;
+     }
+
+     #main_img {
+         margin-top: 1%;
+         margin-bottom: 3%
+     }
+ }

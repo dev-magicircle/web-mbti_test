@@ -5,156 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!--페이지 설명(링크 공유할 때 나오는 부분)-->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="내 MBTI로 보는 나는 어떤 엄빠??" />
+    <meta property="og:title" content="내 MBTI로 보는 나는 어떤 엄빠?" />
     <meta property="og:description" content="간단한 테스트로 나는 어떤 부모 유형인지 알아보자!" />
     <meta property="og:image" content="/img/first_img.jpg" />
+    <!--페이지 설명(링크 공유할 때 나오는 부분)-->
 
     <title>MBTI로 알아보는 나는 어떤 엄빠?</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        .box {
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            text-align: center;
-        }
-
-        #logo {
-            width: 50px;
-            margin-bottom: 6%;
-            /*1*/
-        }
-
-        #title {
-            color: black;
-            font-size: 20px;
-            font-weight: 300;
-        }
-
-        #bold {
-            font-size: 32px;
-            font-weight: 700;
-        }
-
-        #main_img {
-            width: 100%;
-            height: px;
-            margin-top: 6%;
-            /*1*/
-            margin-bottom: 20%;
-        }
-
-        #btn .button {}
-
-        #btn #btn1 {
-            margin-left: 24px;
-            margin-right: 24px;
-            display: block;
-            text-decoration: none;
-            height: 56px;
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            border-radius: 12px;
-            line-height: 56px;
-            background-color: #3373BA;
-            border: 2px solid #3373BA;
-            margin-bottom: 8px;
-        }
-
-        #btn #btn_low {
-            margin-top: 6%;
-            /*1*/
-        }
-
-        #btn #btn2 {
-            margin-right: 8px;
-        }
-
-        #btn #btn2 img {
-            width: 56px;
-        }
-
-        #btn #btn3 {
-            margin-top: 8px;
-            margin-right: 8px;
-        }
-
-        #btn #btn3 img {
-            width: 56px;
-        }
-
-        #btn #btn4 img {
-            width: 56px;
-        }
-
-
-        #btn #btn1:hover {
-            opacity: 0.9;
-        }
-
-
-        #btn #btn2:hover {
-            opacity: 0.8;
-        }
-
-
-        /*가로길이가 700px이상*/
-        @media(min-width:700px) {
-            * {
-                width: 500px;
-                margin: 0 auto;
-            }
-
-            #btn {
-                width: 452px;
-                transform: translate(-24px, 0);
-            }
-
-            #btn #btn1 {
-                width: 452px;
-
-            }
-
-            #logo {
-                margin-bottom: 2%;
-            }
-
-            #main_img {
-                margin-top: 2%;
-                margin-bottom: 4%
-            }
-
-            #btn #btn_low {
-                margin-top: 4%;
-                /*1*/
-            }
-
-
-        }
-
-
-
-        /*세로길이가 650px아래*/
-        @media(max-height:650px) {
-            #logo {
-                margin-bottom: 1%;
-            }
-
-            #main_img {
-                margin-top: 1%;
-                margin-bottom: 3%
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -166,14 +27,15 @@
         </div>
         <img id="main_img" src="img/first_img.gif">
         <div id="btn">
-            <div><a class="button" id="btn1" href="question0.html">테스트 시작</a></div>
+            <div><a class="button" id="btn_test" href="question0.html">테스트 시작</a></div>
 
+            <!--하단 공유 버튼 3개-->
             <div id="btn_low">
-                <a class="button" id="btn2" href="javascript:sendLink()"><img src="img/kakaobtn.png"></a>
+                <a id="btn_kakao" href="javascript:sendLink()"><img src="img/kakaobtn.png"></a>
 
-                <a class="button" id="btn3" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A%2F%2Fvillagebabymbti.netlify.app"><img src="img/facebookbtn.png"></a>
+                <a id="btn_facebook" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A%2F%2Fvillagebabymbti.netlify.app"><img src="img/facebookbtn.png"></a>
 
-                <a class="button" id="btn4" href="#" onClick="clip(); return false" contenteditable='true'><img src="img/sharebtn@4x-8.png"></a></div>
+                <a id="btn_urlshare" href="#" onClick="clip(); return false" contenteditable='true'><img src="img/sharebtn@4x-8.png"></a></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -210,14 +72,14 @@
             alert(pastedData);
         }
 
-        document.getElementById('btn4').addEventListener('paste', handlePaste);
+        document.getElementById('btn_urlshare').addEventListener('paste', handlePaste);
         }
     </script>
 
     <!--링크공유-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
-        $(document).on("click", "#btn4", function(e) {
+        $(document).on("click", "#btn_urlshare", function(e) {
             $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no');
             var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
             $(this).append(html);
