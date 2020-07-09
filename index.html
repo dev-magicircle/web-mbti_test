@@ -5,6 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="웹 페이지 제목" />
+    <meta property="og:url" content="웹 페이지 URL" />
+    <meta property="og:description" content="웹 페이지 내용" />
+    <meta property="og:image" content="img/first_img.gif" />
+
     <title>MBTI로 알아보는 나는 어떤 엄빠?</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
@@ -46,8 +52,12 @@
             margin-bottom: 20%;
         }
 
-        #btn #btn1,
-        #btn #btn2 {
+        #btn .button{
+        }
+
+        #btn #btn1 {
+            margin-left:24px;
+            margin-right:24px;
             display: block;
             text-decoration: none;
             height: 56px;
@@ -57,23 +67,37 @@
             cursor: pointer;
             border-radius: 12px;
             line-height: 56px;
-            margin-left: 24px;
-            margin-right: 24px;
-        }
-
-        #btn #btn1 {
             background-color: #3373BA;
+            border: 2px solid #3373BA;
+            margin-bottom: 8px;
+        }
+        
+        #btn #btn_low{
+            margin-top:6%;
+            /*1*/
         }
 
         #btn #btn2 {
-            margin-top: 8px;
-               border: 2px solid #FFEC00;
-    background-color: #FFEC00;
-    background-image: url("/img/kakao_btn@4x-8.png");
-    background-size: 335px 56px;
-    background-repeat: no-repeat;
-    background-position: center;
+            margin-right: 8px;
         }
+
+        #btn #btn2 img {
+            width: 56px;
+        }
+
+        #btn #btn3 {
+            margin-top: 8px;
+            margin-right: 8px;
+        }
+
+        #btn #btn3 img {
+            width: 56px;
+        }
+
+        #btn #btn4 img {
+            width: 56px;
+        }
+
 
         #btn #btn1:hover {
             opacity: 0.9;
@@ -91,22 +115,31 @@
                 width: 500px;
                 margin: 0 auto;
             }
+            #btn{
+                width:452px;
+                transform:translate(-24px,0);
+            }
+            #btn #btn1{
+                width:452px;
 
+            }
             #logo {
-                margin-bottom: 4%;
+                margin-bottom: 2%;
             }
 
             #main_img {
-                margin-top: 4%;
-                margin-bottom: 8%
+                margin-top: 2%;
+                margin-bottom: 4%
             }
-
-            #btn .button {
-                width: 452px;
-            }
+            #btn #btn_low{
+            margin-top:4%;
+            /*1*/
         }
-        
-        
+
+
+        }
+
+
 
         /*세로길이가 650px아래*/
         @media(max-height:650px) {
@@ -132,7 +165,13 @@
         <img id="main_img" src="img/first_img.gif">
         <div id="btn">
             <div><a class="button" id="btn1" href="question0.html">테스트 시작</a></div>
-            <div><a class="button" id="btn2" href="javascript:sendLink()"></a></div>
+
+            <div id="btn_low">
+                <a class="button" id="btn2" href="javascript:sendLink()"><img src="img/kakaobtn.png"></a>
+
+                <a class="button" id="btn3" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A%2F%2Fvillagebabymbti.netlify.app"><img src="img/facebookbtn.png"></a>
+
+                <a class="button" id="btn4" onclick="CopyUrlToClipboard()" href="javascript:clip()"onfocus="blur();"><img src="img/sharebtn@4x-8.png"></a></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -152,7 +191,16 @@
         } catch (e) {
             window.kakaoDemoException && window.kakaoDemoException(e)
         }
+  
     </script>
+    <script>
+          
+        function clip(){
+            var ulr=document.url;
+            window.clipboardData.setData("Text",url);
+            alert("URL이 클립보드에 복사됐습니다.")
+        }</script>
+
 
 
 </body></html>
