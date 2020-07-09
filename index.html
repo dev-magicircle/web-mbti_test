@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="웹 페이지 제목" />
-    <meta property="og:url" content="웹 페이지 URL" />
-    <meta property="og:description" content="웹 페이지 내용" />
-    <meta property="og:image" content="img/first_img.gif" />
+    <meta property="og:title" content="내 MBTI로 보는 나는 어떤 엄빠?" />
+    <meta property="og:description" content="간단한 테스트로 나는 어떤 부모 유형인지 알아보자!" />
+    <meta property="og:image" content="/img/first_img.jpg" />
 
     <title>MBTI로 알아보는 나는 어떤 엄빠?</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -52,12 +51,11 @@
             margin-bottom: 20%;
         }
 
-        #btn .button{
-        }
+        #btn .button {}
 
         #btn #btn1 {
-            margin-left:24px;
-            margin-right:24px;
+            margin-left: 24px;
+            margin-right: 24px;
             display: block;
             text-decoration: none;
             height: 56px;
@@ -71,9 +69,9 @@
             border: 2px solid #3373BA;
             margin-bottom: 8px;
         }
-        
-        #btn #btn_low{
-            margin-top:6%;
+
+        #btn #btn_low {
+            margin-top: 6%;
             /*1*/
         }
 
@@ -115,14 +113,17 @@
                 width: 500px;
                 margin: 0 auto;
             }
-            #btn{
-                width:452px;
-                transform:translate(-24px,0);
+
+            #btn {
+                width: 452px;
+                transform: translate(-24px, 0);
             }
-            #btn #btn1{
-                width:452px;
+
+            #btn #btn1 {
+                width: 452px;
 
             }
+
             #logo {
                 margin-bottom: 2%;
             }
@@ -131,10 +132,11 @@
                 margin-top: 2%;
                 margin-bottom: 4%
             }
-            #btn #btn_low{
-            margin-top:4%;
-            /*1*/
-        }
+
+            #btn #btn_low {
+                margin-top: 4%;
+                /*1*/
+            }
 
 
         }
@@ -171,7 +173,7 @@
 
                 <a class="button" id="btn3" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A%2F%2Fvillagebabymbti.netlify.app"><img src="img/facebookbtn.png"></a>
 
-                <a class="button" id="btn4" onclick="CopyUrlToClipboard()" href="javascript:clip()"onfocus="blur();"><img src="img/sharebtn@4x-8.png"></a></div>
+                <a class="button" id="btn4" href="#" onClick="clip(); return false" contenteditable='true'><img src="img/sharebtn@4x-8.png"></a></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -191,16 +193,67 @@
         } catch (e) {
             window.kakaoDemoException && window.kakaoDemoException(e)
         }
-  
     </script>
-    <script>
-          
-        function clip(){
-            var ulr=document.url;
-            window.clipboardData.setData("Text",url);
-            alert("URL이 클립보드에 복사됐습니다.")
-        }</script>
+    <script type="text/javascript">
+        function handlePaste(e) {
+            var clipboardData, pastedData;
 
+            // Stop data actually being pasted into div
+            e.stopPropagation();
+            e.preventDefault();
+
+            // Get pasted data via clipboard API
+            clipboardData = e.clipboardData || window.clipboardData;
+            pastedData = clipboardData.getData('Text');
+
+            // Do whatever with pasteddata
+            alert(pastedData);
+        }
+
+        document.getElementById('btn4').addEventListener('paste', handlePaste);
+        }
+    </script>
+
+    <!--링크공유-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#btn4", function(e) {
+            $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no');
+            var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+            $(this).append(html);
+            var input_clip = document.getElementById("clip_target");
+            var _url = $(location).attr('href');
+            $("#clip_target").val(_url);
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                var editable = input_clip.contentEditable;
+                var readOnly = input_clip.readOnly;
+                input_clip.contentEditable = true;
+                input_clip.readOnly = false;
+                var range = document.createRange();
+                range.selectNodeContents(input_clip);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                input_clip.setSelectionRange(0, 999999);
+                input_clip.contentEditable = editable;
+                input_clip.readOnly = readOnly;
+            } else {
+                input_clip.select();
+            }
+            try {
+                var successful = document.execCommand('copy');
+                input_clip.blur();
+                if (successful) {
+                    alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요.");
+                    $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes');
+                } else {
+                    alert('이 브라우저는 지원하지 않습니다.');
+                }
+            } catch (err) {
+                alert('이 브라우저는 지원하지 않습니다.');
+            }
+        });
+    </script>
 
 
 </body></html>

@@ -196,7 +196,7 @@ a {
     }
 
     .slick-active {
-        opacity: 1;
+        opacity: .5;
     }
 
     .slick-current {
