@@ -7,6 +7,15 @@
     <title>결과</title>
     <link rel="stylesheet" href="css/result.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+
+    <!--슬라이드-->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <!--슬라이드-->
+
+
+
 </head>
 
 <body>
@@ -24,8 +33,38 @@
             <a class="button" id="btn1" href="https://babybilly.app/"></a>
             <a class="button" id="btn3" href="javascript:sendLink()"></a>
             <a class="button" id="btn2" href="index.html"></a>
-
         </div>
+
+        <!--슬라이드-->
+        <div class="slide">
+            <section class="regular slider">
+                <div>
+                    <a href="https://www.instagram.com/p/CB42gKgp1x_/?utm_source=ig_web_copy_link"><img src="img/slide1.jpeg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB42NdQJ4S7/?utm_source=ig_web_copy_link">
+                        <img src="img/slide2.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB415jcJv36/?utm_source=ig_web_copy_link">
+                        <img src="img/slide3.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41twLJVgO/?utm_source=ig_web_copy_link">
+                        <img src="img/slide4.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41irtp9r-/?utm_source=ig_web_copy_link">
+                        <img src="img/slide5.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41aMSJdlF/?utm_source=ig_web_copy_link">
+                        <img src="img/slide6.jpg"></a>
+                </div>
+            </section>
+        </div>
+        <!--슬라이드-->
+        
     </center>
     <script type="text/javascript">
         try {
@@ -44,5 +83,28 @@
         } catch (e) {
             window.kakaoDemoException && window.kakaoDemoException(e)
         }
+
     </script>
-</body></html>
+
+    <!--슬라이드-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $(".regular").slick({
+                centerMode: true,
+                dots: true,
+                infinite: true,
+                slidesToShow: 1.65,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            });
+
+        });
+        
+    <!--슬라이드-->
+
+    </script>
+</body>
+
+</html>
