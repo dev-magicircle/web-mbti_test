@@ -7,7 +7,7 @@
 
     <!--페이지 설명(링크 공유할 때 나오는 부분)-->
     <meta property="og:type" content="website" />
-     <meta property="og:url" content="https://villagebabymbti.netlify.app/estj.html"/>
+    <meta property="og:url" content="https://villagebabymbti.netlify.app/estj.html" />
     <meta property="og:title" content="나는 어떤 엄빠? [결과] ESTJ" />
     <meta property="og:description" content="애정을 가장한 꼰머" />
     <meta property="og:image" content="/img/ESTJ.jpg" />
@@ -38,6 +38,8 @@
             <div id="title">현실적인 엄빠 (feat.젊꼰엄빠)</div>
             <div id="main_text">일 잘하고 부지런한 당신, 육아에 있어서도 누구보다 똑부러지는 엄빠가 되겠죠 ? 아이와 가정에 충실하고 책임감이 강한 것은 좋지만, 아이에게 자신의 경험을 이야기 해주기 보다는 아이의 정서도 파악해주는 엄빠가 되기로 해요!</div>
         </div>
+
+        <!--버튼-->
         <div id="btn">
             <a class="button" id="btn1" href="https://babybilly.app/"></a>
             <a class="button" id="btn2" href="index.html"></a>
@@ -85,6 +87,48 @@
         <!--슬라이드-->
 
     </center>
+
+    <!--링크공유-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#btn_urlshare", function(e) {
+            $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no');
+            var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+            $(this).append(html);
+            var input_clip = document.getElementById("clip_target");
+            var _url = $(location).attr('href');
+            $("#clip_target").val(_url);
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                var editable = input_clip.contentEditable;
+                var readOnly = input_clip.readOnly;
+                input_clip.contentEditable = true;
+                input_clip.readOnly = false;
+                var range = document.createRange();
+                range.selectNodeContents(input_clip);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                input_clip.setSelectionRange(0, 999999);
+                input_clip.contentEditable = editable;
+                input_clip.readOnly = readOnly;
+            } else {
+                input_clip.select();
+            }
+            try {
+                var successful = document.execCommand('copy');
+                input_clip.blur();
+                if (successful) {
+                    alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요.");
+                    $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes');
+                } else {
+                    alert('이 브라우저는 지원하지 않습니다.');
+                }
+            } catch (err) {
+                alert('이 브라우저는 지원하지 않습니다.');
+            }
+        });
+    </script>
+
     <script type="text/javascript">
         try {
             Kakao.init('4ad0ef84470bf2e44e5217152e196287')
@@ -120,4 +164,6 @@
 
         });
     </script>
+
+
 </body></html>

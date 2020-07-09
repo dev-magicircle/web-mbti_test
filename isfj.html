@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
+
     <!--페이지 설명(링크 공유할 때 나오는 부분)-->
     <meta property="og:type" content="website" />
-     <meta property="og:url" content="https://villagebabymbti.netlify.app/isfj.html"/>
+    <meta property="og:url" content="https://villagebabymbti.netlify.app/isfj.html" />
     <meta property="og:title" content="나는 어떤 엄빠? [결과] ISFJ" />
     <meta property="og:description" content="이러면 애기한테 안좋을까? 소심소심" />
     <meta property="og:image" content="/img/ISFJ.jpg" />
     <!--페이지 설명(링크 공유할 때 나오는 부분)-->
-    
+
+    <!--슬라이드-->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <!--슬라이드-->
+
     <title>결과</title>
     <link rel="stylesheet" href="css/result.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -29,12 +34,94 @@
             <div id="title">누구와도 조화로운 엄빠 (aka 소심충)</div>
             <div id="main_text">항상 성실하고 누구와도 잘 어울리는 사람으로 인식되는 당신, 아이와도 아이 주변 사람들과도 항상 조화롭게 지내는 따뜻한 사람이 될거예요. 하지만 가끔은 당당히 할 말을 하는 엄빠가 되라구!</div>
         </div>
+
+        <!--버튼-->
         <div id="btn">
             <a class="button" id="btn1" href="https://babybilly.app/"></a>
-            <a class="button" id="btn3" href="javascript:sendLink()"></a>
             <a class="button" id="btn2" href="index.html"></a>
+
+            <!--하단 공유 버튼 3개-->
+            <div id="btn_low">
+                <a id="btn_kakao" href="javascript:sendLink()"><img src="img/kakaobtn.png"></a>
+
+                <a id="btn_facebook" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A%2F%2Fvillagebabymbti.netlify.app"><img src="img/facebookbtn.png"></a>
+
+                <a id="btn_urlshare" href="#" onClick="clip(); return false" contenteditable='true'><img src="img/sharebtn@4x-8.png"></a></div>
         </div>
+
+        <!--슬라이드-->
+        <div class="slide">
+            <section class="regular slider">
+                <div>
+                    <a href="https://www.instagram.com/p/CB42gKgp1x_/?utm_source=ig_web_copy_link"><img src="img/slide1.jpeg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB42NdQJ4S7/?utm_source=ig_web_copy_link">
+                        <img src="img/slide2.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB415jcJv36/?utm_source=ig_web_copy_link">
+                        <img src="img/slide3.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41twLJVgO/?utm_source=ig_web_copy_link">
+                        <img src="img/slide4.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41irtp9r-/?utm_source=ig_web_copy_link">
+                        <img src="img/slide5.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CB41aMSJdlF/?utm_source=ig_web_copy_link">
+                        <img src="img/slide6.jpg"></a>
+                </div>
+            </section>
+        </div>
+        <!--슬라이드-->
+
     </center>
+    <!--링크공유-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#btn_urlshare", function(e) {
+            $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no');
+            var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+            $(this).append(html);
+            var input_clip = document.getElementById("clip_target");
+            var _url = $(location).attr('href');
+            $("#clip_target").val(_url);
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                var editable = input_clip.contentEditable;
+                var readOnly = input_clip.readOnly;
+                input_clip.contentEditable = true;
+                input_clip.readOnly = false;
+                var range = document.createRange();
+                range.selectNodeContents(input_clip);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                input_clip.setSelectionRange(0, 999999);
+                input_clip.contentEditable = editable;
+                input_clip.readOnly = readOnly;
+            } else {
+                input_clip.select();
+            }
+            try {
+                var successful = document.execCommand('copy');
+                input_clip.blur();
+                if (successful) {
+                    alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요.");
+                    $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes');
+                } else {
+                    alert('이 브라우저는 지원하지 않습니다.');
+                }
+            } catch (err) {
+                alert('이 브라우저는 지원하지 않습니다.');
+            }
+        });
+    </script>
+
+
     <script type="text/javascript">
         try {
             Kakao.init('4ad0ef84470bf2e44e5217152e196287')
@@ -53,4 +140,22 @@
             window.kakaoDemoException && window.kakaoDemoException(e)
         }
     </script>
+
+    <!--슬라이드-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $(".regular").slick({
+                centerMode: true,
+                dots: true,
+                infinite: true,
+                slidesToShow: 1.65,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+
+        });
+    </script>
+
 </body></html>
