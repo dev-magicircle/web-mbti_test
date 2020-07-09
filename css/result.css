@@ -63,7 +63,7 @@
 #btn {
     margin-top: 2rem;
     /*비율*/
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     /*비율*/
 }
 
@@ -128,16 +128,17 @@
      width: 56px;
  }
 
+#btn #btn_urlshare{
+    cursor: pointer;
+}
+
  /*링크복사버튼*/
  #btn #btn_urlshare img {
      width: 56px;
  }
 
 
- /*마우스 오버 효과*/
- #btn #btn_test:hover {
-     opacity: 0.9;
- }
+
 
  #btn #btn_kakao:hover {
      opacity: 0.8;
@@ -207,7 +208,7 @@ a {
     #btn {
     margin-top: 2rem;
     /*비율*/
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     /*비율*/
 }
      #btn #btn_low {
