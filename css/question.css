@@ -6,6 +6,12 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+ #logo {
+     width: 50px;
+     margin-top: 2rem;
+     /*1*/
+ }
+
 .box {
     position: absolute;
     top: 50%;
