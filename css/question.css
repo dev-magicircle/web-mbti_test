@@ -7,13 +7,10 @@
 }
 
  #logo {
-    position: relative;
-    left: 50%;
-    transform: translate(0, -50%);
-    width: 50px;
-    margin-top: 2rem;
-    /*1*/
-}
+     width: 50px;
+     margin-top: 2rem;
+     /*1*/
+ }
 
 .box {
     position: absolute;
@@ -30,7 +27,7 @@
     color: #3373BA;
     position: relative;
     top: 1rem;
-    margin-bottom: 13%;
+    margin-bottom: 8%;
     /*비율*/
 }
 
@@ -154,7 +151,6 @@
 
 
     #qNumber {
-        margin-top:10%;
         margin-bottom: 10%;
         /*비율*/
     }

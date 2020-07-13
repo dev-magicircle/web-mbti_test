@@ -11,7 +11,7 @@
 #logo {
     position: relative;
     left: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-50%, 0);
     width: 50px;
     margin-top: 2rem;
     /*1*/

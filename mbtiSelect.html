@@ -12,17 +12,26 @@
         }
 
         .box {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             margin: auto;
+        }
+
+        #logo {
+            position:relative;
+            left:50%;
+            transform: translate(-50%,0);
+            width: 50px;
+            margin-top: 2rem;
+            /*1*/
         }
 
         h2 {
             color: black;
             position: relative;
-            font-size:28px;
+            font-size: 28px;
             text-align: center;
         }
 
@@ -33,7 +42,7 @@
         }
 
         a {
-            width:6rem;
+            width: 6rem;
             font-weight: 300;
             text-decoration: none;
             color: white;
@@ -54,8 +63,7 @@
 
         /*폰*/
         @media(max-width:700px) {
-            .box {
-            }
+            .box {}
 
             h2 {
                 font-size: 24px;
@@ -67,20 +75,20 @@
             }
 
             a {
-                width:7rem;
-                padding:10px;
-                margin:8px;
+                width: 7rem;
+                padding: 10px;
+                margin: 8px;
                 font-weight: 300;
                 font-size: 18px;
                 text-align: center;
             }
         }
-        
     </style>
 </head>
 
 <body>
     <div class="box">
+        <img id="logo" src="img/Logo.png">
         <h2>당신의 MBTI를 고르세요.</h2>
         <div class="mbti">
             <a href="enfj.html" onclick="enfj()">ENFJ</a>
