@@ -1,4 +1,4 @@
-# VillageBaby_mbti
+# mbti test (Psychological test)
 사이트 URL: https://villagebabymbti.netlify.app
 
 ![KakaoTalk_20200719_224320471_01](https://user-images.githubusercontent.com/62414035/87876253-c8c79800-ca11-11ea-8c4b-9efc79207b46.jpg)
